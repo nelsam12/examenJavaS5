@@ -1,0 +1,12 @@
+/home/elolo/Java/demo/src/main/java/com/example/repository/IUserRepository.java
+/home/elolo/Java/demo/src/main/java/com/example/entities/User.java
+/home/elolo/Java/demo/src/main/java/com/example/controllers/MainController.java
+/home/elolo/Java/demo/src/main/java/com/example/repository/IRepository.java
+/home/elolo/Java/demo/src/main/java/com/example/entities/Client.java
+/home/elolo/Java/demo/src/main/java/com/example/enums/Role.java
+/home/elolo/Java/demo/src/main/java/com/example/repository/IClientRepository.java
+/home/elolo/Java/demo/src/main/java/com/example/repository/impl/RepositoryJpaImpl.java
+/home/elolo/Java/demo/src/main/java/com/example/repository/impl/UserRepositoryJpaImpl.java
+/home/elolo/Java/demo/src/main/java/module-info.java
+/home/elolo/Java/demo/src/main/java/com/example/repository/impl/ClientRepositoryJpaImpl.java
+/home/elolo/Java/demo/src/main/java/com/example/App.java

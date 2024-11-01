@@ -8,7 +8,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main extends Application {
+import com.example.repository.IClientRepository;
+import com.example.repository.IUserRepository;
+import com.example.repository.impl.ClientRepositoryJpaImpl;
+import com.example.repository.impl.UserRepositoryJpaImpl;
+
+public class App extends Application {
 
     private static Scene scene;
 
@@ -25,11 +30,18 @@ public class Main extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
     public static void main(String[] args) {
+        // REPOSITORY
+        IClientRepository clientRepository = new ClientRepositoryJpaImpl();
+        IUserRepository userRepository = new UserRepositoryJpaImpl();
+
+        clientRepository.selectAll();
+
+       
         launch();
     }
 

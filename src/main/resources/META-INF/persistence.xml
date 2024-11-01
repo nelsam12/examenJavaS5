@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+version="2.2">
+	<persistence-unit name="mySqlUnit" transaction-type="RESOURCE_LOCAL">
+		<!-- JPA Provider -->
+		<provider>
+			org.hibernate.jpa.HibernatePersistenceProvider
+		</provider>
+		<!-- Specify the Entity classes that are mapped -->
+		<class>
+			com.example.entities.Client
+		</class>
+		<class>
+			com.example.entities.User
+		</class>
+
+		
+		<!-- Enable Hibernate's automatic schema generation -->
+		<exclude-unlisted-classes>
+			true
+		</exclude-unlisted-classes>
+		<!-- JDBC connection settings -->
+		<properties>
+			<!-- Database connection -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gestionDetteFx"/>
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="localhost" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<!-- Hibernate settings -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />			
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="true" />
+			<!-- Caching, pooling, and other optimizations -->
+			<property name="hibernate.cache.use_second_level_cache" value="false" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="postGreUnit" transaction-type="RESOURCE_LOCAL">
+		<!-- JPA Provider -->
+		<provider>
+			org.hibernate.jpa.HibernatePersistenceProvider
+		</provider>
+		<!-- Specify the Entity classes that are mapped -->
+		<class>
+			com.ism.data.entity.Client
+		</class>
+		<class>
+			com.ism.data.entity.User
+		</class>
+
+		<class>
+			com.ism.data.entity.Dette
+		</class>
+
+		<class>
+			com.ism.data.entity.Article
+		</class>
+
+		<class>
+			com.ism.data.entity.Detail
+		</class>
+
+		
+		<!-- Enable Hibernate's automatic schema generation -->
+		<exclude-unlisted-classes>
+			true
+		</exclude-unlisted-classes>
+		<!-- JDBC connection settings -->
+		<properties>
+			<!-- Database connection -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://localhost:5432/gestion_dette_java_2024" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="2004" />
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<!-- Hibernate settings -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="true" />
+			<!-- Caching, pooling, and other optimizations -->
+			<property name="hibernate.cache.use_second_level_cache" value="false" />
+		</properties>
+	</persistence-unit>
+
+</persistence>

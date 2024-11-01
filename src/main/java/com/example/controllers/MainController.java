@@ -1,4 +1,4 @@
-package com.example;
+package com.example.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,8 +12,6 @@ public class MainController {
     private TextField logintxt;
     @FXML
     private PasswordField passwordtxt;
-
-
     public void getLogin(ActionEvent event){
         String login = logintxt.getText();
         String password = passwordtxt.getText();

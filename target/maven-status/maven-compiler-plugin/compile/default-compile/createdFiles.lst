@@ -1,0 +1,12 @@
+com/example/repository/IUserRepository.class
+com/example/App.class
+com/example/entities/User.class
+com/example/repository/impl/RepositoryJpaImpl.class
+com/example/entities/Client.class
+module-info.class
+com/example/controllers/MainController.class
+com/example/repository/impl/UserRepositoryJpaImpl.class
+com/example/repository/impl/ClientRepositoryJpaImpl.class
+com/example/repository/IRepository.class
+com/example/enums/Role.class
+com/example/repository/IClientRepository.class
